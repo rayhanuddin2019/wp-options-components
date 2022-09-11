@@ -71,9 +71,12 @@ function wp_seetings_selectively_enqueue_admin_script( $hook ) {
 	}
 
     $assets = include_once( WP_SETTINGS_FR_DIR_PATH . 'build/index.asset.php' );
-	wp_enqueue_style('wp-settings-override', WP_SETTINGS_FR_BUILD_CSS . 'index.css', array(), time(), 'all');
+	
     wp_enqueue_script( 'wp-settings-script', WP_SETTINGS_FR_BUILD_JS . 'index.js', $assets['dependencies'], $assets['version'], true );
-
+   
+	foreach($assets['dependencies'] as $style){
+		wp_enqueue_style($style);
+	}
 }
 
 add_action( 'admin_enqueue_scripts', 'wp_seetings_selectively_enqueue_admin_script' );
