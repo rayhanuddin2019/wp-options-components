@@ -24,7 +24,8 @@
   "author": "rayhanuddin\u001b[3~",
   "license": "ISC",
   "devDependencies": {
-    "@wordpress/scripts": "^24.0.0"
+    "@wordpress/scripts": "^24.0.0",
+    "css-minimizer-webpack-plugin": "^4.1.0"
   },
   "dependencies": {
     "@wordpress/dom-ready": "^3.16.0",
