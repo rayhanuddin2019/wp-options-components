@@ -25,9 +25,12 @@
   "license": "ISC",
   "devDependencies": {
     "@wordpress/scripts": "^24.0.0",
+    "copy-webpack-plugin": "^6.4.1",
     "css-minimizer-webpack-plugin": "^4.1.0"
   },
   "dependencies": {
+    "@wordpress/block-editor": "^9.8.0",
+    "@wordpress/blocks": "^11.15.0",
     "@wordpress/dom-ready": "^3.16.0",
     "@wordpress/element": "^4.14.0"
   }

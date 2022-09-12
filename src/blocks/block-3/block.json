@@ -1,0 +1,16 @@
+{
+	"apiVersion": 2,
+	"name": "create-block/block-3",
+	"version": "0.1.0",
+	"title": "My Third Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "my-first-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

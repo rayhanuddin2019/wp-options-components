@@ -66,13 +66,13 @@ function wp_seetings_selectively_enqueue_admin_script( $hook ) {
        return;
     }
 
-    if(!file_exists(WP_SETTINGS_FR_DIR_PATH . 'build/index.asset.php')){
+    if(!file_exists(WP_SETTINGS_FR_DIR_PATH . 'build/framework/options/settings.asset.php')){
        return;
 	}
 
-    $assets = include_once( WP_SETTINGS_FR_DIR_PATH . 'build/index.asset.php' );
+    $assets = include_once( WP_SETTINGS_FR_DIR_PATH . 'build/framework/options/settings.asset.php' );
 	
-    wp_enqueue_script( 'wp-settings-script', WP_SETTINGS_FR_BUILD_JS . 'index.js', $assets['dependencies'], $assets['version'], true );
+    wp_enqueue_script( 'wp-settings-script', WP_SETTINGS_FR_BUILD_JS . 'framework/options/settings.js', $assets['dependencies'], $assets['version'], true );
    
 	foreach($assets['dependencies'] as $style){
 		wp_enqueue_style($style);
@@ -81,3 +81,45 @@ function wp_seetings_selectively_enqueue_admin_script( $hook ) {
 
 add_action( 'admin_enqueue_scripts', 'wp_seetings_selectively_enqueue_admin_script' );
 
+//Blocks
+
+function qs_register_block_first() {
+
+    if ( ! function_exists( 'register_block_type' ) ) {
+        // Block editor is not available.
+        return;
+    }
+
+	if(!file_exists(WP_SETTINGS_FR_DIR_PATH . 'build/blocks')){
+       return;
+	}
+	$blocks = moption_ready_get_dir_list('blocks');
+	if(is_array($blocks)){
+		foreach($blocks as $item){
+			register_block_type( WP_SETTINGS_FR_DIR_PATH . 'build/blocks/'.$item );
+		}
+	}
+    
+	// register_block_type( WP_SETTINGS_FR_DIR_PATH . 'build/blocks/block-1' );
+	// register_block_type( WP_SETTINGS_FR_DIR_PATH . 'build/blocks/block-2' );
+	// //register_block_type( WP_SETTINGS_FR_DIR_PATH . 'build/blocks/block-3' );
+}
+
+// Hook: Editor assets.
+add_action( 'init', 'qs_register_block_first' );
+
+function moption_ready_get_dir_list($path = 'blocks'){
+
+	$widgets_modules = [];
+	$dir_path        = WP_SETTINGS_FR_DIR_PATH."build/".$path;
+	$dir             = new \DirectoryIterator($dir_path);
+	 
+	 foreach ($dir as $fileinfo) {
+		 if ($fileinfo->isDir() && !$fileinfo->isDot()) {
+			 $widgets_modules[$fileinfo->getFilename()] = $fileinfo->getFilename();
+			
+		 }
+	 }
+
+	 return $widgets_modules;
+}
