@@ -5,9 +5,23 @@
   "title": "My First Block",
   "category": "widgets",
   "icon": "smiley",
-  "description": "Example block written with ESNext standard and JSX support – build step required.",
+  "description": "block written with ESNext standard and JSX support – build step required.",
   "supports": {
-    "html": false
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "link": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    }
   },
   "textdomain": "my-first-block",
   "editorScript": "file:./index.js",
