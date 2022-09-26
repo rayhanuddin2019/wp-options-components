@@ -2,12 +2,16 @@ import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
 
 export default function save() {
+	const blockProps = useBlockProps.save();
 	return (
-		<p {...useBlockProps.save()}>
+		<p {...blockProps}>
 			{__(
-				'My First Block – hello from the saved content!',
+				'Saved Block Attribute',
 				'my-first-block'
-			)}
+			)
+			
+			}
+			
 		</p>
 	);
 }

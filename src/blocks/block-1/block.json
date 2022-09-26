@@ -6,6 +6,12 @@
 	"category": "widgets",
 	"icon": "smiley",
 	"description": "block written with ESNext standard and JSX support – build step required.",
+	"attributes": {
+		"textAlign": {
+			"type": "string",
+			"default": "center"
+		}
+	},
 	"supports": {
 		"html": false,
 		"color": {
