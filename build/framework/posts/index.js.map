@@ -1,0 +1,1 @@
+{"version":3,"file":"framework/posts/index.js","mappings":";;;;;AAAAA,OAAO,CAACC,GAAR,CAAY,kBAAZ,E","sources":["webpack://wp-settings-framework/./src/framework/posts/SinglePostApp.js"],"sourcesContent":["console.log(\"SinglePostApp.js\");"],"names":["console","log"],"sourceRoot":""}

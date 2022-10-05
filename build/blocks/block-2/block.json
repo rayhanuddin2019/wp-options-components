@@ -2,15 +2,23 @@
   "apiVersion": 2,
   "name": "create-block/block-2",
   "version": "0.1.0",
-  "title": "My Second Block",
+  "title": "Dynamic block",
   "category": "widgets",
   "icon": "smiley",
-  "description": "Example block written with ESNext standard and JSX support – build step required.",
+  "description": "Dynamic block with custom component ",
   "supports": {
     "html": false
+  },
+  "attributes": {
+    "textAlign": {
+      "type": "string",
+      "default": "center"
+    }
   },
   "textdomain": "my-secod-block",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css"
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "render_callback": "mo_optins_dynamic_render_callback"
 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/block-3/index.css","mappings":";;;AAAA;EACI;AACJ,C","sources":["webpack://wp-settings-framework/./src/blocks/block-3/editor.scss"],"sourcesContent":[".wp-block-create-block-block-3{\r\n    color:rgb(49, 49, 242);\r\n}"],"names":[],"sourceRoot":""}

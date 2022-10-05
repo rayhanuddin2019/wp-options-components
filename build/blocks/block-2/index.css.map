@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/block-2/index.css","mappings":";;;AAAA;EACI;AACJ,C","sources":["webpack://wp-settings-framework/./src/blocks/block-2/editor.scss"],"sourcesContent":["h1{\r\n    color:Red;\r\n  }"],"names":[],"sourceRoot":""}

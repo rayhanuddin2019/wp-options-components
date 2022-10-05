@@ -1,11 +1,29 @@
 import { __ } from '@wordpress/i18n';
-import { useBlockProps } from '@wordpress/block-editor';
+import {
+	useBlockProps,
+	BlockControls,
+	__experimentalBlockAlignmentMatrixToolbar as BlockAlignmentMatrixToolbar,
+	BlockAlignmentToolbar
+} from '@wordpress/block-editor';
+import ServerSideRender from '@wordpress/server-side-render';
 import './editor.scss';
 
-export default function Edit() {
+export default function Edit({ attributes, setAttributes }) {
 	return (
-		<p {...useBlockProps()}>
-			{__('My First Block – hello from the editor!', 'my-first-block')}
-		</p>
+		<div {...useBlockProps()}>
+			{
+			    <BlockControls>
+					<BlockAlignmentToolbar 
+					value={ attributes.textAlign }
+					onChange={ ( nextAlign ) => {
+					     setAttributes( { textAlign: nextAlign } );
+					} } />	 	 
+				</BlockControls>
+			}
+			<ServerSideRender
+                    block="create-block/block-2"
+                    attributes={ attributes }
+            />
+		</div>
 	);
 }
