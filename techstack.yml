@@ -1,7 +1,8 @@
 repo_name: rayhanuddin2019/wp-options-components
 report_id: 1bc76df19da19a4033b196e94d899d18
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-10T14:44:14+00:00'
+timestamp: '2024-01-05T08:53:26+00:00'
 requested_by: rayhanuddin2019
 provider: github
 branch: block
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1208/download.png
+  detection_source_url: https://github.com/rayhanuddin2019/wp-options-components
   detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -26,6 +28,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/rayhanuddin2019/wp-options-components
   detection_source: Repo Metadata
 - name: PHP
   description: A popular general-purpose scripting language that is especially suited
@@ -36,6 +39,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source_url: https://github.com/rayhanuddin2019/wp-options-components
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -45,6 +49,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/rayhanuddin2019/wp-options-components
   detection_source: Repo Metadata
 - name: Webpack
   description: A bundler for javascript and friends
@@ -56,8 +61,8 @@ tools:
   category: Build, Test, Deploy
   sub_category: JS Build Tools / JS Task Runners
   image_url: https://img.stackshare.io/service/1682/IMG_4636.PNG
-  detection_source_url: package-lock.json
-  detection_source: webpack.config.js
+  detection_source_url: https://github.com/rayhanuddin2019/wp-options-components/blob/block/package-lock.json
+  detection_source: package.json
   last_updated_by: Rayhan
   last_updated_on: 2022-09-12 06:45:20.000000000 Z
 - name: npm
@@ -68,6 +73,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/rayhanuddin2019/wp-options-components/blob/block/package.json
   detection_source: package.json
   last_updated_by: Rayhan
   last_updated_on: 2022-09-11 07:02:00.000000000 Z
@@ -80,6 +86,7 @@ tools:
   category: Support, Sales, and Marketing
   sub_category: Self-Hosted Blogging / CMS
   image_url: https://img.stackshare.io/service/250/logo.png
+  detection_source_url: https://github.com/rayhanuddin2019/wp-options-components/blob/block/package.json
   detection_source: package.json
   last_updated_by: Rayhan
   last_updated_on: 2022-09-12 06:45:20.000000000 Z
@@ -93,7 +100,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15941/default_b45165a5d30e541ab11711a34a78209b3e8ed7fd.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/rayhanuddin2019/wp-options-components/blob/block/package-lock.json
   detection_source: package.json
   last_updated_by: Rayhan
   last_updated_on: 2022-09-12 06:45:20.000000000 Z
